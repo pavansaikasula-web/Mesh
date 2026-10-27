@@ -1,0 +1,45 @@
+{
+  "$schema": "https://raw.githubusercontent.com/Ylianst/MeshCentral/master/meshcentral-config-schema.json",
+  "__comment1__": "This is a simple configuration file, all values and sections that start with underscore (_) are ignored. Edit a section and remove the _ in front of the name. Refer to the user's guide for details.",
+  "__comment2__": "See node_modules/meshcentral/sample-config-advanced.json for a more advanced example.",
+  "settings": {
+    "cert": "127.0.0.1",
+    "WANonly": true,
+    "port": 443,
+    "aliasPort": 443,
+    "redirPort": 80,
+    "redirAliasPort": 80,
+    "dbCleanup": 30,
+    "mongodbcol": "meshcentral",
+    "keepcerts": false,
+    "noLocalDiscovery": true,
+    "noMqtt": true,
+    "noFirebase": true,
+    "noAmt": true,
+    "noMps": true
+  },
+  "domains": {
+    "": {
+      "title": "ADP Agent",
+      "minify": false,
+      "compression": true,
+      "noAdminLoginStats": true,
+      "noAgentUpdate": false,
+      "agentCustomization": {
+        "displayName": "ADP MeshCentral Agent",
+        "description": "ADP remote management agent",
+        "companyName": "ADP",
+        "serviceName": "adpmeshagent",
+        "fileName": "ADPMeshAgent"
+      },
+      "agentFileInfo": {
+        "icon": "ADP_agent.ico",
+        "filedescription": "ADP MeshCentral Agent",
+        "fileversion": "1.0.0.0",
+        "internalname": "ADPMeshAgent",
+        "productname": "ADP MeshCentral Agent",
+        "productversion": "1.0"
+      }
+    }
+  }
+}
